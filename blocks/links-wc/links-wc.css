@@ -1,0 +1,5 @@
+/* Styles are encapsulated inside the Web Component's Shadow DOM.
+   This file is intentionally minimal — only host-level layout if needed. */
+.links-wc helpful-links {
+  display: block;
+}
