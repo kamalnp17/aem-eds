@@ -1,0 +1,25 @@
+import { createOptimizedPicture } from '../../scripts/aem.js';
+
+export default function decorate(block) {
+  /* change to ul, li */
+  const ul = document.createElement('ul');
+  ul.className = 'helpful-links-list';
+  [...block.children].forEach((row) => {
+    const li = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = row.children[0].textContent;
+    link.innerHTML = row.children[1].textContent;
+    li.appendChild(link);
+
+    // while (row.firstElementChild) li.append(row.firstElementChild);
+    // [...li.children].forEach((div) => {
+
+      // if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
+      // else div.className = 'cards-card-body';
+      // div.appendChild(link);
+    // });
+    ul.append(li);
+  });
+  // ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
+  block.replaceChildren(ul);
+}
