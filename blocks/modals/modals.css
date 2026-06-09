@@ -1,0 +1,40 @@
+/*@import url('https://fedsacustomerauth.blob.core.windows.net/customui/stencil-components/theme-tokens.css?v=1');*/
+.modals-wrapper {
+    margin: 12px 0 !important;
+}
+
+.modal-demo {
+    margin: var(--fe-spacing-md) 0;
+    padding: var(--fe-spacing-md);
+    background: var(--fe-color-surface);
+    border-radius: var(--fe-radius-md);
+    border: 1px solid var(--fe-color-border);
+}
+
+.modal-demo__trigger {
+    font-family: var(--fe-font-body);
+    font-size: var(--fe-font-size-base);
+    padding: var(--fe-spacing-sm) var(--fe-spacing-md);
+    border-radius: var(--fe-radius-md);
+    border: 1px solid var(--fe-color-primary);
+    background: var(--fe-color-primary);
+    color: var(--fe-color-text-inverse);
+    cursor: pointer;
+}
+
+.modal-demo__trigger:hover {
+    background: var(--fe-color-primary-hover);
+    border-color: var(--fe-color-primary-hover);
+}
+
+.modal-demo__close {
+    font-family: var(--fe-font-body);
+    font-size: var(--fe-font-size-base);
+    padding: var(--fe-spacing-sm) var(--fe-spacing-md);
+    border-radius: var(--fe-radius-md);
+    border: 1px solid var(--fe-color-primary);
+    background: var(--fe-color-primary);
+    color: var(--fe-color-text-inverse);
+    cursor: pointer;
+}
+
