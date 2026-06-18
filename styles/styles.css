@@ -9,7 +9,7 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-@import url('https://fedsacustomerauth.blob.core.windows.net/customui/stencil-components/theme-tokens.css');
+@import url('https://fedsacustomerauth.blob.core.windows.net/customui/shared-components/fe-design-poc.css');
 
 :root {
   /* colors */

@@ -10,6 +10,7 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  loadScript,
 } from './aem.js';
 
 /**
@@ -133,6 +134,13 @@ export function decorateMain(main) {
 async function loadEager(doc) {
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
+  // Awaiting this inside loadEager blocks further decoration until registered
+  try {
+    await loadScript('https://fedsacustomerauth.blob.core.windows.net/customui/shared-components/fe-design-poc.js', { type: 'module' });
+  } catch (err) {
+    console.error('Critical web components failed to load:', err);
+  }
+
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);

@@ -1,5 +1,4 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
-import 'https://fedsacustomerauth.blob.core.windows.net/customui/stencil-components/fe-modal.js';
 
 /**
  * EDS-style block decorator for `modal-demo`.
@@ -7,10 +6,6 @@ import 'https://fedsacustomerauth.blob.core.windows.net/customui/stencil-compone
  * Receives the raw block markup that EDS produces from authored content
  * (a div containing key/value pairs as nested divs) and replaces it with
  * a button that opens a configured <fe-modal>.
- *
- * This is the standard EDS `decorate(block)` pattern. Same code works
- * for both the Lit and Stencil implementations — they expose the same
- * <fe-modal> custom element API.
  */
 export default function decorate(block) {
   // Parse the EDS key/value structure.
